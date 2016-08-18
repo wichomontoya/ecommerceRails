@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Productos disponibles en nuestra tienda</h1>
+
+<div class="container">
+  <div class="row">
+    
+    <%@products.each do |product|%>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="card">
+          <img src="../assets/<%=product.picture%>" alt="<%=product.picture%>" style="width:100%">
+          <div class="container">
+            <h4><b><%=product.name%></b></h4> 
+            <p><%=product.name%></p>
+            <p>Stock: <%=product.quantity%></p>
+            <div align="center" >
+              <a href="/products/<%=product.id%>" class="btn btn-success btn-sm">Ver</a>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    <%end%>
+  </div>
+</div>
+
+<br>
+
+

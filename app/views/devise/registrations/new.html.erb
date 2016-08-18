@@ -1,0 +1,51 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  
+  
+  <div class="field form-inline">
+
+    <%= f.text_field :first_name, autofocus: true, :class =>'form-control', :placeholder =>"Nombre"%>
+  </div>
+
+  <div class="field form-inline">
+
+    <%= f.text_field :last_name,:class =>'form-control', :placeholder =>"Apellido"%>
+  </div>
+
+  <div class="field form-inline">
+
+    <%= f.text_field :address,:class =>'form-control', :placeholder =>"Dirección" %>
+  </div>
+
+  <div class="field form-inline">
+
+    <%= f.text_field :phone,:class =>'form-control', :placeholder =>"Telefono" %>
+  </div>
+
+
+  <div class="field form-inline">
+
+    <%= f.email_field :email, autofocus: true,:class =>'form-control', :placeholder =>"Email" %>
+  </div>
+
+  <div class="field form-inline">
+
+    <% if @minimum_password_length %>
+
+    <% end %>
+    <%= f.password_field :password, autocomplete: "off" ,:class =>'form-control', :placeholder =>"Contraseña (mínimo 6 carácteres)"%>
+  </div>
+
+  <div class="field form-inline">
+
+    <%= f.password_field :password_confirmation, autocomplete: "off" ,:class =>'form-control', :placeholder =>"Confirmar Contraseña"%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

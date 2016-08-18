@@ -1,0 +1,45 @@
+html {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+
+body {
+	background-image: url("http://img.wallpaperfolder.com/f/4DB78879EBF9/warhammer-labels-games-workshop-pc.jpg");
+	background-size: cover;  
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+
+}
+
+#yield {
+	background-color: black;
+	opacity: 0.95;
+	color: white;
+}
+
+.navbar, .navbar-brand {
+	background-color: white;
+
+}
+
+.button{
+	align-content: center;
+}
+
+.card{
+	color:black;
+}
+.jumbotron {
+	background-image: url("http://www.autoescuelaaneto.com/wp-content/uploads/2015/08/ofertas-banner.jpg");
+	height: 230px;
+}
+

@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<div class= "card">
+
+	<img src="../assets/<%=@product.picture%>" alt="<%=@product.picture%>" style="width:100%">
+
+	<div class="container">
+	    <h4><b><%=@product.name%></b></h4> 
+	    <p><%=@product.name%></p>
+	    <h4>Descripcion: </h4>
+	    <p><%=@product.description%></p>
+	    <p>Stock: <%=@product.quantity%></p>
+	    <div align="center" >
+	    <a href="" class="btn btn-success btn-sm" id="comprar">Comprar</a>
+	    <br>
+	</div>
+</div>
+

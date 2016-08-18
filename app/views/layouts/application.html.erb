@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chimeras Box</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+  	  <nav class="navbar navbar-light bg-faded">
+        <a class="navbar-brand" href="/">Chimeras Box</a>
+        <ul class="nav navbar-nav">
+          
+          <%if current_user.nil?%>
+
+            <li>
+              <button class="btn btn-danger-outline pull-xs-right" type="submit"><a href="/users/sign_up"> Registrese</a></button>
+            </li>
+
+            <li>
+              <button class="btn btn-danger-outline pull-xs-right" type="submit"><a href="/users/sign_in"> Log In</a></button>
+            </li> 
+
+          <%else%>
+            
+            <li> 
+              <button class="btn btn-danger-outline pull-xs-right" type="submit">
+                <%= link_to 'Salir', destroy_user_session_path, method: :delete %>
+              </button>
+            </li>
+
+            <li>
+              <button class="btn btn-danger-outline pull-xs-right" type="submit"><a href="/"> Mi cuenta</a></button>
+            </li>
+
+          <%end%>
+        </ul>
+
+      </nav> 
+
+    <div class="jumbotron">
+      
+    </div>
+
+  	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  <div class= "container-fluid">
+    <div class="row">
+      <div class="col-sm-2" id="brands">
+        
+      </div>
+
+      <div class="col-sm-8" id="yield">
+        <%= yield %>
+      </div>
+    </div>
+
+  </div>
+    
+
+  </body>
+</html>
